@@ -79,7 +79,7 @@ All logs are saved in the ./logs/ folder in CSV format. Each file includes:
 
 ## Hardware Safety
 
-The system includes a software-level protection layer: if the GPU temperature exceeds the value set in TEMP_LIMIT (default 85°C), the microservice immediately terminates the process to prevent permanent hardware damage.
+The system includes a software-level protection layer: if the GPU temperature exceeds the value set in `TEMP_LIMIT` (default 85°C), the microservice immediately terminates the process to prevent permanent hardware damage.
 
 
 ## Cleanup
@@ -97,7 +97,7 @@ make clean  # Remove Docker images and temporary build files
 
 I am actively working to improve this toolkit. Future releases will include:
 
-- [ ] **Native Multi-GPU Parallel Support**: Currently, tests run on selected devices; we are implementing a coordinated multi-GPU synchronization for simultaneous stress testing.
+- [ ] **Native Multi-GPU Parallel Support**: Currently, tests run on selected devices; it is planed to implement a coordinated multi-GPU synchronization for simultaneous or individual stress testing.
 - [ ] **Automated Data Analysis**: A new microservice based on **Pandas** to automatically process the `./logs/*.csv` files, generating summary reports and health alerts.
 - [ ] **HTML Visual Reports**: Integration with Matplotlib/Seaborn to export graphical charts of thermal and power trends.
 - [ ] **Prometheus Exporter**: Direct integration for real-time monitoring in Grafana dashboards.
