@@ -1,5 +1,5 @@
 help:
-	@echo "Available commands:"
+	@echo "NVD-Bench     - Usage:"
 	@echo "  build       - Build Docker images"
 	@echo "  run-burst   - Run GPU stress test (params: DURATION, GPUS, TEMP_LIMIT)"
 	@echo "  run-p2p     - Run P2P bandwidth test (params: DURATION, GPUS)"
