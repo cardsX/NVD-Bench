@@ -7,7 +7,6 @@ A Docker-based monitoring and stress-test suite for NVIDIA GPU hardware validati
 
 The primary goal of this project is to verify hardware health, analyze thermal efficiency, and measure interconnect bandwidth between cards in an isolated and reproducible environment.
 
----
 
 ## Features
 * **Intensive Stress Test (Burst):** Maximum computational load to test the stability of Power Supply Units (PSU) and cooling systems.
@@ -22,7 +21,7 @@ The primary goal of this project is to verify hardware health, analyze thermal e
 * **Docker:** Version 20.10+ with [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html).
 * **Tools:** `make` and `bash`.
 
----
+
 
 ## Usage
 To run the tests, use the following commands:
@@ -91,5 +90,15 @@ make stop   # Stop any active test containers
 make clean  # Remove Docker images and temporary build files
 ```
 
+---
 
+
+##  Upcoming Features
+
+I am actively working to improve this toolkit. Future releases will include:
+
+- [ ] **Native Multi-GPU Parallel Support**: Currently, tests run on selected devices; we are implementing a coordinated multi-GPU synchronization for simultaneous stress testing.
+- [ ] **Automated Data Analysis**: A new microservice based on **Pandas** to automatically process the `./logs/*.csv` files, generating summary reports and health alerts.
+- [ ] **HTML Visual Reports**: Integration with Matplotlib/Seaborn to export graphical charts of thermal and power trends.
+- [ ] **Prometheus Exporter**: Direct integration for real-time monitoring in Grafana dashboards.
 
